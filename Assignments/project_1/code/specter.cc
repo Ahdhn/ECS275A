@@ -30,11 +30,11 @@ int main(int argc, char** argv)
 	
 	//argv[1] = "scenes/prog012.scn";
 	//argv[1] = "scenes/spiral.scn";
-	//argv[1] = "scenes/phongtest.scn";
+	argv[1] = "scenes/phongtest.scn";
 	//argv[1] = "scenes/room_with_spheres.scn";
 	//argv[1] = "scenes/teapot.scn";
 	//argv[1] = "scenes/sphere_pyramid.scn";
-	argv[1] = "scenes/cornell.scn";
+	//argv[1] = "scenes/cornell.scn";
 
 	if (argc < 2) {
 		cerr << "Usage: specter scene" << endl;
