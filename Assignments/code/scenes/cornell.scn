@@ -1,0 +1,292 @@
+// Cornell box
+// See http://www.graphics.cornell.edu/online/box/data.html
+// See http://web.mit.edu/povray_v3.6.1/share/povray-3.6/scenes/radiosity/cornell.pov
+
+xres 2048
+yres 2048
+filename "cornell.ppm"
+maxraydepth 25
+minattenuation 0.01
+
+
+camera pinhole {
+  eye [ 27.8, 27.3, -80.0 ]
+  lookat [ 27.8, 27.3, -79.0 ]
+  up [ 0.0, 1.0, 0.0 ]
+  hfov 39.5
+}
+
+background constant {
+  color [ 0.0, 0.0, 0.0 ]
+}
+
+ambient 0.4
+
+//light area {
+//  //position [ 27.8, 54.88, 27.95 ]
+//  //color [ 1.0, 0.67, 0.21 ]
+//  corner [ 21.3, 54.87, 22.7 ] // HACK in Y
+//  edge1 [ 0.0, 0.0, 10.5 ]
+//  edge2 [ 13.0, 0.0, 0.0 ]
+//  color [ 1.0, 0.95, 0.75 ] // HACK
+//}
+
+light point {
+  position [ 21.3, 54.87, 22.7 ]
+  color [ 1.0, 0.95, 0.75 ]
+}
+
+
+define material White lambertian {
+  color [ 1.0, 1.0, 1.0 ]
+  Kd 0.75  
+  Ka 0.3 
+}
+
+define material Red lambertian {
+  color [ 0.57, 0.025, 0.025 ]
+  Kd 0.75
+  Ka 0.0
+}
+
+define material Green lambertian {
+  color [ 0.025, 0.236, 0.025 ]
+  Kd 0.75
+  Ka 0.0
+}
+
+scene group {
+  // Fake Light
+  
+   // triangle {
+   //   material solid {
+   //     color [ 1.0, 1.0, 1.0 ]
+   //   }
+   //   corner1 [ 21.3, 54.879, 22.7 ]
+   //   corner2 [ 34.3, 54.879, 22.7 ]
+   //   corner3 [ 34.3, 54.879, 33.2 ]
+   // }
+   // triangle {
+   //   material solid {
+   //     color [ 1.0, 1.0, 1.0 ]
+   //   }
+   //   corner1 [ 21.3, 54.879, 22.7 ]
+   //   corner2 [ 34.3, 54.879, 33.2 ]
+   //   corner3 [ 21.3, 54.879, 33.2 ]
+   // }
+  
+  
+  // Floor
+  
+    triangle {
+      material White
+      corner1 [ 55.28, 0.0, 0.0 ]
+      corner2 [ 0.0, 0.0, 0.0 ]
+      corner3 [ 0.0, 0.0, 55.92 ]
+    }
+    triangle {
+      material White
+      corner1 [ 55.28, 0.0, 0.0 ]
+      corner2 [ 0.0, 0.0, 55.92 ]
+      corner3 [ 54.96, 0.0, 55.92 ]
+    }
+  
+
+  // Ceiling
+  
+    triangle {
+      //material White
+      material lambertian {         
+        color [ 1.0, 0.95, 0.75 ] 
+        Kd 0.1
+        Ka 0.8
+      }
+      corner1 [ 55.60, 54.88, 0.0 ]
+      corner2 [ 55.60, 54.88, 55.92 ]
+      corner3 [ 0.0, 54.88, 55.92 ]
+    }
+    triangle {
+      //material White
+      material lambertian {        
+        color [ 1.0, 0.95, 0.75 ]
+        Kd 0.1
+        Ka 0.8
+      }
+      corner1 [ 55.60, 54.88, 0.0 ]
+      corner2 [ 0.0, 54.88, 55.92 ]
+      corner3 [ 0.0, 54.88, 0.0 ]
+    }
+  
+
+  // Back Wall  
+    triangle {
+      material White
+      corner1 [ 0.0, 54.88, 55.92 ]
+      corner2 [ 55.60, 54.88, 55.92 ]
+      corner3 [ 54.96, 0.0, 55.92 ]
+    }
+    triangle {
+      material White
+      corner1 [ 0.0, 54.88, 55.92 ]
+      corner2 [ 54.96, 0.0, 55.92 ]
+      corner3 [ 0.0, 0.0, 55.92 ]
+    }
+  
+  
+  // Right Wall 
+    triangle {
+      material Green
+      corner1 [ 0.0, 54.88, 0.0 ]
+      corner2 [ 0.0, 54.88, 55.92 ]
+      corner3 [ 0.0, 0.0, 55.92 ]
+    }
+    triangle {
+      material Green
+      corner1 [ 0.0, 54.88, 0.0 ]
+      corner2 [ 0.0, 0.0, 55.92 ]
+      corner3 [ 0.0, 0.0, 0.0 ]
+    }  
+    
+  // Left Wall  
+    triangle {
+      material Red
+      corner1 [ 55.28, 0.0, 0.0 ]
+      corner2 [ 54.96, 0.0, 55.92 ]
+      corner3 [ 55.60, 54.88, 55.92 ]
+    }
+    triangle {
+      material Red
+      corner1 [ 55.28, 0.0, 0.0 ]
+      corner2 [ 55.60, 54.88, 55.92 ]
+      corner3 [ 55.60, 54.88, 0.0 ]
+    }
+  
+  
+  // Short block
+  
+   
+      triangle { 
+        material White
+        corner1 [ 13.00, 16.50, 6.50 ]
+        corner2 [ 8.20, 16.50, 22.50 ]
+        corner3 [ 24.00, 16.50, 27.20 ]
+      }
+      triangle {
+        material White
+        corner1 [ 13.00, 16.50, 6.50 ]
+        corner2 [ 24.00, 16.50, 27.20 ]
+        corner3 [ 29.00, 16.50, 11.40 ]
+      }
+      triangle {
+        material White
+        corner1 [ 29.00, 0.0, 11.40 ]
+        corner2 [ 29.00, 16.50, 11.40 ]
+        corner3 [ 24.00, 16.50, 27.20 ]
+      }
+      triangle {
+        material White
+        corner1 [ 29.00, 0.0, 11.40 ]
+        corner2 [ 24.00, 16.50, 27.20 ]
+        corner3 [24.00, 0.0, 27.20 ]
+      }
+      triangle {
+        material White
+        corner1 [ 13.00, 0.0, 6.50 ]
+        corner2 [ 13.00, 16.50, 6.50 ]
+        corner3 [ 29.00, 16.50, 11.40 ]
+      }
+      triangle {
+        material White
+        corner1 [ 13.00, 0.0, 6.50 ]
+        corner2 [ 29.00, 16.50, 11.40 ]
+        corner3 [ 29.00, 0.0, 11.40 ]
+      }
+      triangle {
+        material White
+        corner1 [ 8.20, 0.0, 22.50 ]
+        corner2 [ 8.20, 16.50, 22.50 ]
+        corner3 [ 13.00, 16.50, 6.50 ]
+      }
+      triangle {
+        material White
+        corner1 [ 8.20, 0.0, 22.50 ]
+        corner2 [ 13.00, 16.50, 6.50 ]
+        corner3 [ 13.00, 0.0, 6.50 ]
+      }
+      triangle {
+        material White
+        corner1 [ 24.00, 0.0, 27.20 ]
+        corner2 [ 24.00, 16.50, 27.20 ]
+        corner3 [ 8.20, 16.50, 22.50 ]
+      }
+      triangle {
+        material White
+        corner1 [ 24.00, 0.0, 27.20 ]
+        corner2 [ 8.20, 16.50, 22.50 ]
+        corner3 [ 8.20, 0.0, 22.50 ]
+      }
+   
+ 
+    // Tall block
+    
+      triangle {
+        material White
+        corner1 [ 42.30, 33.00, 24.70 ]
+  			corner2 [ 26.50, 33.00, 29.60 ]
+  			corner3 [ 31.40, 33.00, 45.60 ]
+      }
+      triangle {       
+        material White
+        corner1 [ 42.30, 33.00, 24.70 ]
+  			corner2 [ 31.40, 33.00, 45.60 ]
+  			corner3 [ 47.20, 33.00, 40.60 ]
+      }
+      triangle {
+        material White
+        corner1 [ 42.30, 0.0, 24.70 ]
+  			corner2 [ 42.30, 33.00, 24.70 ]
+  			corner3 [ 47.20, 33.00, 40.60 ]
+      }
+      triangle {
+        material White
+        corner1 [ 42.30, 0.0, 24.70 ]
+  			corner2 [ 47.20, 33.00, 40.60 ]
+  			corner3 [ 47.20, 0.0, 40.60 ]
+      }
+      triangle {
+        material White
+        corner1 [ 47.20, 0.0, 40.60 ]
+  			corner2 [ 47.20, 33.00, 40.60 ]
+  			corner3 [ 31.40, 33.00, 45.60 ]
+      }
+      triangle {
+        material White
+        corner1 [ 47.20, 0.0, 40.60 ]
+  			corner2 [ 31.40, 33.00, 45.60 ]
+  			corner3 [ 31.40, 0.0, 45.60 ]
+      }
+      triangle {
+        material White
+        corner1 [ 31.40, 0.0, 45.60 ]
+  			corner2 [ 31.40, 33.00, 45.60 ]
+  			corner3 [ 26.50, 33.00, 29.60 ]
+      }
+      triangle {
+        material White
+        corner1 [ 31.40, 0.0, 45.60 ]
+  			corner2 [ 26.50, 33.00, 29.60 ]
+  			corner3 [ 26.50, 0.0, 29.60 ]
+      }
+      triangle {
+        material White
+        corner1 [ 26.50, 0.0, 29.60 ]
+        corner2 [ 26.50, 33.00, 29.60 ]
+        corner3 [ 42.30, 33.00, 24.70 ]
+      }
+      triangle {
+        material White
+        corner1 [ 26.50, 0.0, 29.60 ]
+        corner2 [ 42.30, 33.00, 24.70 ]
+        corner3 [ 42.30, 0.0, 24.70 ]
+      }
+}
