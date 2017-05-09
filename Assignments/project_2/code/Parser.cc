@@ -1,6 +1,7 @@
 
 #include "Parser.h"
 #include "PinholeCamera.h"
+#include "ThinLensCamera.h" 
 #include "ConstantBackground.h"
 #include "PointLight.h"
 #include "LambertianMaterial.h"
@@ -340,10 +341,10 @@ Color const Parser::parseColor()
 		match(Token::comma, "Expected a comma");
 		double b = parseReal();
 		match(Token::right_bracket, "Expected a right bracket");
-		return Color(r, g, b);
+		return Color(float(r), float(g), float(b));
 	}
 	double v = parseReal();
-	return Color(v, v, v);
+	return Color(float(v), float(v), float(v));
 }
 
 Camera *Parser::parsePinholeCamera()
@@ -371,11 +372,54 @@ Camera *Parser::parsePinholeCamera()
 	return new PinholeCamera(eye, lookat, up, hfov);
 }
 
+Camera *Parser::parseThinLenCamera()
+{
+	Point eye(0.0, 0.0, 0.0);
+	Point lookat(0.0, 1.0, 0.0);
+	Vector up(0.0, 0.0, 1.0);
+	double hfov(90.0);
+	double len_radius = 0.3;
+	double focus_dist = 1.0;
+	if (peek(Token::left_brace)){
+		for (;;){
+			if (peek("eye")){
+				eye = parsePoint();
+			}
+			else if (peek("lookat")){
+				lookat = parsePoint();
+			}
+			else if (peek("up")){
+				up = parseVector();
+			}
+			else if (peek("hfov")){
+				hfov = parseReal();
+			}
+			else if (peek("lensradius")){
+				len_radius = parseReal();
+			}
+			else if (peek("focus")){
+				focus_dist = parseReal();
+			}
+			else if (peek(Token::right_brace)){
+				break;
+			}
+			else {
+				throwParseException("Expected `eye', `lookat', `up', `hfov', `len_radius', `focus_dist' or }.");
+			}
+		}
+	}
+	return new ThinLensCamera(eye, lookat, up, hfov, len_radius, focus_dist);
+}
+
 Camera *Parser::parseCamera()
 {
 	if (peek("pinhole"))
 		return parsePinholeCamera();
-	throwParseException("Expected a camera type.");
+	else if (peek("thinlens"))
+		return parseThinLenCamera();
+	else 
+		throwParseException("Expected a camera type.");
+
 	return 0;
 }
 
@@ -449,7 +493,7 @@ Material *Parser::parseLambertianMaterial()
 			else
 				throwParseException("Expected `color', `Kd', `Ka' or }.");
 		}
-	return new LambertianMaterial(color, Kd, Ka);
+	return new LambertianMaterial(color, float(Kd), float(Ka));
 }
 
 Material *Parser::parsePhongMaterial()
@@ -531,6 +575,8 @@ Object *Parser::parseSphereObject()
 {
 	Material *material = default_material;
 	Point center(0.0, 0.0, 0.0);
+	Vector direction(0.0, 0.0, 0.0);
+	double speed = 0.0;
 	double radius = 0.5;
 	if (peek(Token::left_brace))
 		for (;;)
@@ -541,16 +587,23 @@ Object *Parser::parseSphereObject()
 				center = parsePoint();
 			else if (peek("radius"))
 				radius = parseReal();
+			else if (peek("direction"))
+				direction = parseVector();
+			else if (peek("speed"))
+				speed = parseReal();
 			else if (peek(Token::right_brace))
 				break;
 			else
 				throwParseException("Expected `material', `center', `radius' or }.");
 		}
-	return new Sphere(material, center, radius);
+	//return new Sphere(material, center, radius);
+	return new Sphere(material, center, radius, direction, speed);
 }
 Object *Parser::parseTriangleObject()
 {
 	Material *material = default_material;
+	Vector direction(0.0, 0.0, 0.0);
+	double speed = 0.0;
 	Point p1(1.0, 0.0, 0.0);
 	Point p2(0.0, 1.0, 0.0);
 	Point p3(0.0, 0.0, 1.0);
@@ -565,18 +618,24 @@ Object *Parser::parseTriangleObject()
 				p2 = parsePoint();
 			else if (peek("corner3"))
 				p3 = parsePoint();
+			else if (peek("direction"))
+				direction = parseVector();
+			else if (peek("speed"))
+				speed = parseReal();
 			else if (peek(Token::right_brace))
 				break;
 			else
 				throwParseException("Expected `material', `corner1', `corner2', `corner3' or }.");
 		}
-	return new Triangle(material, p1, p2, p3);
+	//return new Triangle(material, p1, p2, p3);
+	return new Triangle(material, p1, p2, p3, direction, speed);
 }
 
 Object *Parser::parsePolygonObject()
 {
 	Material *material = default_material;	
 	std::vector<Point> point_list;	
+	Vector direction(0.0, 0.0, 0.0);	
 	bool is_luminous = false;
 	double speed = 0.0;
 	if (peek(Token::left_brace))
@@ -590,13 +649,18 @@ Object *Parser::parsePolygonObject()
 				int num = parseInteger();
 				while (num--)
 					point_list.push_back(parsePoint());
-			}						
+			}		
+			else if (peek("direction"))
+				direction = parseVector();
+			else if (peek("speed"))
+				speed = parseReal();
 			else if (peek(Token::right_brace))
 				break;
 			else
 				throwParseException("Expected `material', `points'");
 		}
-	Primitive* ret = new Polygon(material, is_luminous, point_list); 
+	//Primitive* ret = new Polygon(material, is_luminous, point_list); 
+	Primitive* ret = new Polygon(material, is_luminous, point_list, direction, speed);
 	return ret;
 }
 
@@ -685,7 +749,9 @@ Scene *Parser::parseScene(string &filename)
 		}
 		else{
 			throwParseException("Expected `filename', `xres', `yres', `maxraydepth', `minattenuation', "
-				"`camera', `background', `ambient', `light', `scene', or `define'.");
+				                 "`camera', `background', `ambient', `light', `scene'"
+								 "`pixelsamplingfrequency', `lenssamplingfrequency', `timesamplingfrequency', `samplingfrequency', `pathtracingfrequency', or `define'.");
+
 		}
 	}
 
