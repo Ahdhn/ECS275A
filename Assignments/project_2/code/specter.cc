@@ -30,7 +30,7 @@ int main(int argc, char** argv)
 	
 	
 	//argv[1] = "C:/Users/Ahmed/Documents/GitHub/ECS275A/Assignments/project_2/code/scenes/test.scn";
-	argv[1] = "C:/Users/Ahmed/Documents/GitHub/ECS275A/Assignments/project_2/code/scenes/teapot.scn";
+	argv[1] = "C:/Users/Ahmed/Documents/GitHub/ECS275A/Assignments/project_2/code/scenes/bunny.scn";
 	
 
 	if (argc < 2) {

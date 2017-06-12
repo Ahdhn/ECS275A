@@ -1,0 +1,39 @@
+\documentclass[12pt] {article}
+\usepackage{times}
+\usepackage{setspace}
+%\doublespacing
+\usepackage[margin=1.0in,bottom=1in,top=1in]{geometry}
+
+
+
+\begin{document}
+
+\title{Quiz - ECS 275A}
+\author{Ahmed H. Mahmoud}
+\date{May 31, 2017} 
+
+\maketitle
+
+\textbf{Q:} What is the purpose of a final one eye bounce Monte Carlo final gathering of a radiosity solution?
+
+\textbf{A:} To wash away (smooth out) the artifacts appear in the radiosity solution due to using mesh. 
+\newline
+
+
+\textbf{Q:} What is the purpose of a final one eye bounce Monte Carlo final gathering of a diffuse photon map?
+
+\textbf{A:}
+To compute the remaining of indirection illumination (after computing direct illumination, specular reflection and caustics).
+\newline
+
+\textbf{Q:} How are the set of point sources for instant radiosity determined?
+
+\textbf{A:} The point sources are placed at the locations where a number of simulated photon trajectories hit the surface of objects. 
+\newline
+
+\textbf{Q:} What is the meaning of the phase function for volume scattering?
+
+\textbf{A:} The phase function $p(z,\Psi \leftrightarrow \Theta)$ at $z$ describes the probability of scattering from direction $\Psi$ into $\Theta$ and usually depends on the angle between the two directions $\Psi$ and $\Theta$.
+
+
+\end{document}

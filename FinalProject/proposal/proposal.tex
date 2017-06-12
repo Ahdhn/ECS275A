@@ -1,0 +1,59 @@
+%=========================Preamble====================================%
+\documentclass[12pt] {article}
+\usepackage{times}
+\usepackage[margin=1in,bottom=1in,top=1in]{geometry}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[usenames]{color}
+\usepackage[]{todonotes}
+\usepackage{blindtext}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\newcommand{\yuxin}[1]{\todo[inline,color=green!30]{\textbf{mohamed:} #1}}%set command to comment
+\definecolor{figgreen}{rgb}{0,0.6,0}%set color
+
+\newcommand{\ahmed}[1]{\todo[inline,color=blue!30]{\textbf{ahmed:} #1}}%set command to comment
+\definecolor{figblue}{rgb}{0,0,1}%set color
+
+\newcommand{\final}{0}%Set to 1 to remove comments 
+
+\ifthenelse{\equal{\final}{1}}%make sure comments don't show when \final = 1
+{
+\renewcommand{\yuxin}[1]{}
+\renewcommand{\ahmed}[1]{}
+}
+
+\newcommand{\wes}{{\fontfamily{qcr}\selectfont wesBench}}
+%=========================Doc====================================%
+\begin{document}
+\title{Final Project Proposal - ECS 275\\
+\vspace{2mm}
+Accelerated Ray Tracing}
+
+\author{ Ahmed H. Mahmoud}
+\date{February, 17th 2017} 
+\maketitle
+
+We propose to explore the challenges of using efficient data structure to accelerate the ray tracing computation on parallel platform. Using efficient data structure is the natural choice to think of when implementing a CPU-based ray tracing due to well-developed implementation of these data structure on CPU and virtually unlimited amount of memory available. In this work, we would like to explore the challenges of implementing ray tracing on GPU using CUDA in terms of which data structure is more efficient (uniform grid, BVH or Kd-tree), how the necessary elimination of recursion calls would affect the performance and how to map the data structure to the memory hierarchy to maximize the performance. 
+
+
+The target of our project can be summed in the following milestone 
+\begin{enumerate}
+\item Implementing basic ray tracing using CUDA. (5 days)
+\item Accelerate the performance using uniform gird, BVH and kd-tree (1 week to 10 days)
+\item Experimenting with complex scenes. (2-3 days)
+\item Report and presentation. (2-3 days)
+\end{enumerate}
+
+\paragraph{Deliverables} We intend to deliver a better understanding on why certain data structure is more superior and better suited for ray tracing. This will be supported by experimental data of complex scenes.
+
+
+
+
+%=========================Bib====================================%
+\bibliography{mybib}
+\bibliographystyle{IEEEtran}
+
+\end{document}

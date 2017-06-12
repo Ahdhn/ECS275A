@@ -1,0 +1,2846 @@
+// Sprialing spheres
+
+xres 1024
+yres 1024
+filename "sprial.ppm"
+maxraydepth 25
+minattenuation 0.010000
+
+camera pinhole {
+  eye [0, 0, 10]
+  lookat [0, 0, 0]
+  up [1, 1, 0]
+  hfov 26
+}
+
+background constant {
+  color [0.10000000000000001, 0.10000000000000001, 0.10000000000000001]
+}
+
+ambient 0.400000
+
+light point {
+  color [1.0, 1.0, 1.0]
+  position [40, 40, 40]
+}
+
+scene group {
+ bvhgroup {
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4      
+	  Kr 0.3
+      exponent 40
+    }
+    center [1.0, 0.0, 10.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4  
+      Kr 0.3	  
+      exponent 40
+    }
+    center [-0.98999249660044542, 0.14112000805986721, 9.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4  
+	  Kr 0.3	  
+      exponent 40
+    }
+    center [0.96017028665036608, -0.27941549819892586, 9.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4   
+	  Kr 0.3
+      exponent 40
+    }
+    center [-0.91113026188467694, 0.41211848524175659, 8.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.84385395873249214, -0.53657291800043494, 8.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.7596879128588212, 0.65028784015711694, 7.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.66031670824408017, -0.75098724677167605, 7.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.54772926022426849, 0.83665563853605596, 6.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.42417900733699693, -0.90557836200662389, 6.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.29213880873383619, 0.95637592840450303, 5.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.15425144988758405, -0.98803162409286183, 5.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.013276747223059479, 0.99991186010726718, 4.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.12796368962740468, -0.99177885344311578, 4.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.2666429323599373, 0.96379538628408779, 3.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.39998531498835133, -0.91652154791563378, 3.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.52532198881772973, 0.85090352453411844, 2.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.64014433946919969, -0.76825466132366682, 2.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.74215419681378259, 0.67022917584337471, 1.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.82930983286315019, -0.55878904885161618, 1.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.89986682696919384, 0.43616475524782494, 0.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.95241298041515632, -0.30481062110221668, 0.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.98589658158254967, 0.16735570030280694, -0.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99964745596634996, -0.026551154023966794, -1.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99339037972227162, -0.11478481378318722, -1.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.96725058827388244, 0.25382336276203626, -2.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.9217512697247493, -0.38778163540943045, -2.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.85780309324498782, 0.51397845598753522, -3.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.77668598202163119, -0.62988799427445397, -3.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.68002349558733877, 0.7331903200732921, -4.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.56975033426531196, -0.82181783663082253, -4.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.44807361612917013, 0.89399666360055785, -5.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.31742870151970165, -0.94828214126994725, -5.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.18043044929108393, 0.98358774543434491, -6.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.039820880393138899, -0.9992068341863537, -6.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.10158570369662134, 0.99482679135840635, -7.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.24095904923620143, -0.97053528353748475, -7.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.37550959776701204, 0.92681850541778499, -8.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.50254431914538522, -0.86455144861060829, -8.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.61952061255920987, 0.78498038868131048, -9.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.72409719670047379, -0.68969794093538905, -9.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.8141809705265618, 0.58061118421231428, -10.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.88796890669185546, -0.45990349068959124, -10.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.94398413915231416, 0.32999082567378207, -11.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.98110552264938811, -0.19347339203846847, -11.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99859007243999121, 0.053083587146058243, -12.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99608783514118493, 0.08836868610400142, -12.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.97364889304951807, -0.22805225950086119, -13.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.93172236174352008, 0.363171365373259, -13.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.87114740103234345, -0.49102159389846933, -14.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.79313641916647837, 0.60904402188329243, -14.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.69925080647837512, -0.71487642962916453, -15.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.59136968414432478, 0.80640058077548626, -15.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.47165229356133864, -0.8817846188147811, -16.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.34249477911590703, 0.93951973171314829, -16.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.20648222933781113, -0.97845035079337961, -17.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.066336936335623736, 0.99779727944989072, -17.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.075136090898353228, -0.99717328877407985, -18.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.21510526876214114, 0.97659086794356575, -18.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.35076911320913062, -0.93646197425121325, -19.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.47941231147032198, 0.87758978777711572, -19.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.59846006905785809, -0.80115263573383055, -20.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.70552964429420606, 0.70868040823920841, -20.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.79847803890303237, -0.60202393755528327, -21.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.87544489013427518, 0.48331795366796271, -21.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.93488970593723519, -0.35493835765184628, -22.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.97562269791944434, 0.2194546679940636, -22.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99682859496943066, -0.079578591664283521, -23.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99808296091355742, -0.06189025071872073, -23.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.97936068960892453, 0.20212035931279124, -24.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.94103650744298872, -0.33830502754097785, -24.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.88387747318237175, 0.46771851834275896, -25.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.80902762528643013, -0.58777061981984058, -25.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.71798508396971372, 0.69605848834491146, -26.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.61257206631568428, -0.79041474149318147, -26.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.49489841458940231, 0.86895083821634933, -27.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.36731936773024515, -0.93009487800452539, -27.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.23238842122852268, 0.97262306248562436, -28.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.092806218895877063, -0.99568418975810324, -28.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.048633500538969116, 0.99881669120280825, -29.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.18909982012986334, -0.98195786978202548, -29.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.32578130553514811, 0.9454451549211168, -30.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.4559422758951242, -0.89000934885627714, -30.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.5769775585030581, 0.81675999962280854, -31.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.68646463135461999, -0.72716319344364899, -31.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.78221210994227119, 0.623012211003653, -32.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.8623036078310824, -0.50639163492449091, -32.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.92513609314625822, 0.37963562682930313, -33.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.96945197326701038, -0.24528120908194287, -33.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99436426555141366, 0.10601748626711378, -34.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99937435030001431, 0.035368177256176046, -34.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.98438195063250489, -0.17604594647121138, -35.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.9496871395301657, 0.31320015487066988, -35.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.89598433387310372, -0.44408566004090988, -36.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.82434839568167639, 0.56608278770604414, -36.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.73621311874584561, -0.67674976452638336, -37.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.63334253123272344, 0.77387159020843166, -37.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.51779558865081332, -0.85550437075082075, -38.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.3918849638415085, 0.92001422549596457, -38.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.25813075881644731, -0.96610998926252967, -39.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.11921006489861569, 0.99286905502531797, -39.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.022096619278683942, -0.99975583990114947, -40.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.16296103947088339, 0.98663250484391052, -40.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.30056379335008321, -0.95376171349399874, -41.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.43215076086181514, 0.90180137496377455, -41.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.55508822795665769, -0.83179147578220447, -42.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.66691560039484221, 0.74513326455741269, -42.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.76539465255669215, -0.64356120597626187, -43.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.84855432554361809, 0.5291082654818533, -43.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.91473017793537514, -0.4040652194563607, -44.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.9625976995964054, 0.27093480531616548, -44.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99119882175520679, -0.13238162920545193, -45.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99996109275730882, -0.0088211661138858765, -45.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.98870913568902885, 0.14984740573347818, -46.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.95766815854759157, -0.28787444850848604, -46.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.907459446701534, 0.42013968223930681, -47.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.83908792785982955, -0.54399581737353231, -47.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.75392205843696014, 0.65696387252433963, -48.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.65366643388847667, -0.7567827912998033, -48.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.54032767122136605, 0.84145469736195266, -49.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.41617424654101293, -0.90928488193526025, -49.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.28369109148652732, 0.95891572341430653, -50.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.14552985730709223, -0.98935386016944282, -50.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.0044558420441823017, 0.99999007268656293, -51.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.13670735692753769, -0.99061147709981978, -51.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.27513435722086477, 0.96140578606364835, -52.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.40805454148374776, -0.9129575516827102, -52.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.53280751132442616, 0.84623646569754452, -53.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.6468963352033299, -0.76257795109778859, -53.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.74803752453482009, 0.66365643362195958, -54.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.83420673772675724, -0.55145182811491456, -54.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.90367929739123065, 0.42820991051876856, -55.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.95506470977420443, -0.29639736865214339, -55.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.98733449549745844, 0.15865243143670757, -56.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99984277458033588, -0.017732064727370864, -56.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99233919373194779, -0.12354320937804643, -57.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.96497393717399227, 0.26234576530777837, -57.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.91829472070253637, -0.39589746896115763, -58.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.85323582915263307, 0.52152528208152926, -58.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.77109941668099646, -0.63671476313513187, -59.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.67352944414170068, 0.73916039387549159, -59.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.56247877519850853, -0.82681172430680117, -60.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.44017008974536365, 0.89791441245452708, -60.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.30905139695320089, -0.95104533753195752, -61.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.17174703834974567, 0.98514108371242493, -61.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.031005161605993422, -0.99951922440430641, -62.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.11035728365811025, 0.99389198102389542, -62.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.24951092713946565, -0.96837198288571125, -63.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.38367060771767258, 0.92347001292600284, -63.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.51015111847379202, -0.86008478437880709, -64.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.62642095112508545, 0.77948495302445919, -64.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.73015296418050579, -0.68328372503552348, -65.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.81927096069346383, 0.5734065686442813, -65.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.89199124335782942, -0.45205267588296999, -66.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.94685831522164232, 0.32165094574030556, -66.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.98277401146850107, -0.18481136973170906, -67.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99901947919383005, 0.04427279290137974, -67.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99526956525065213, 0.097151904179886256, -68.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.9715993241920361, -0.23663210523844544, -68.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.92848251605370669, 0.3713761131017696, -69.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.86678212404370836, -0.4986870255363352, -69.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.78773308192762892, 0.61601671376416356, -70.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.69291755682088496, -0.72101682327763728, -70.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.58423328210314895, 0.81158577617093708, -71.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.46385557427185253, -0.88591083423611539, -71.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.33419379396770033, 0.94250438093065347, -72.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.19784312260506454, -0.9802336960326743, -72.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.057532619798331443, 0.99834362704388546, -73.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.083929398784835837, -0.99647170357196591, -73.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.22371156988067947, 0.97465539217793373, -74.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.35901615238432194, -0.93333134648267191, -74.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.48713502415700222, 0.87332666754173771, -75.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.60550388510909592, -0.7958423494121124, -75.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.71175358168384417, 0.70242924124798467, -76.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.80375752548189994, -0.59495700704438548, -76.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.87967425694260049, 0.47557670429961529, -77.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.93798430216959361, -0.34667773058479051, -77.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.97752058521120466, 0.21083999973521136, -78.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99749178709354447, -0.070782304857407816, -78.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99749818407515145, -0.070692098333373352, -79.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.97753964812039529, 0.21075159869536875, -79.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.9380156494621108, -0.34659290437655321, -80.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.87971726120217131, 0.47549715072011811, -80.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.80381132597797678, -0.59488431835906275, -81.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.71181710159913214, 0.70236487232136735, -81.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.60557585309205886, -0.79578758858870446, -82.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.48721399976797164, 0.87328261085979197, -82.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.35910055492590737, -0.93329887573697712, -83.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.22379971003543722, 0.97463515727068573, -83.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.084019512426969145, -0.99646410950497077, -84.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.05744233629398255, 0.99834882581244566, -84.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.19775447626345349, -0.98025158358340192, -85.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.33410855904595715, 0.94253459924409888, -85.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.46377545674751541, -0.88595277849252974, -86.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.58415988552901232, 0.81163860685574296, -86.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.69285235022987912, -0.72107948298431912, -87.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.78767737043011621, 0.61608794835826597, -87.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.8667370227056902, -0.4987654092569731, -88.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.92844892757877029, 0.37146007709824136, -88.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.97157792085373562, -0.23671996897079078, -89.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99526077543694924, 0.097241909054904915, -89.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99902347883290576, 0.044182448331873195, -90.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.98279072050755212, -0.18472249371488758, -90.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.94688739922913834, 0.32156531713025011, -91.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.89203212021716272, -0.45197200853689301, -91.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.81932281225401693, 0.57333247711966306, -92.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.73021475263294189, -0.68321769227473295, -92.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.6264914397731085, 0.77942830067365243, -93.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.51022889648663283, -0.86003864633517069, -93.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.38375411836787537, 0.92343531264279399, -94.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.24959849896079872, -0.96834941488933435, -94.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.11044716389997424, 0.99388199701295132, -95.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.030914771897250549, -0.99952202420884206, -95.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.17165794832475892, 0.98515661129433341, -96.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.30896538974942617, -0.95107328210658149, -96.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.44008888679756925, 0.89795421471101533, -97.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.56240400178424665, -0.82686258760271958, -97.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.67346259685136622, 0.73922130018162635, -98.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.77104183346355992, -0.63678449341135179, -98.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.85318866253658299, 0.52160244067588168, -99.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.91825891472801358, -0.39598051154385194, -99.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.96495020849782043, 0.26243302978095728, -100.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99232801728374176, -0.12363294914268595, -100.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.9998443740567825, -0.017641645813270129, -101.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.98734883888502567, 0.15856314310832614, -101.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.95509150998989278, -0.29631099801598088, -102.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.90371801802854068, 0.42812818628369498, -102.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.83425660379186994, -0.55137638599205063, -103.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.74809753795810341, 0.66358878358590723, -103.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.64696529481570852, -0.76251944716447939, -104.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.53288403689878971, 0.84618827882360159, -104.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.40813710136020492, -0.91292064632874292, -105.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.27522129896292691, 0.96138090089056749, -105.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.1367969403956463, -0.99059911018453373, -106.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.0043654098637504876, 0.99999047155296505, -106.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.14544038641504342, -0.98936701683421957, -107.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.28360437264337418, 0.95894137454672279, -107.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.41609201542499075, -0.90932251412772647, -108.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.54025157368882115, 0.84150355740588068, -108.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.65359799303204036, -0.75684190126108164, -109.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.75386264410083925, 0.65703204931669157, -109.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.83903872922236555, -0.54407169643799513, -110.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.90742144847379036, 0.42022174485588953, -110.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.95764212126435477, -0.28796105219335977, -111.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.98869558048669992, 0.14993681711330134, -111.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.99996029094335459, -0.0089115956192834054, -112.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.99121078937793894, -0.13229199152164539, -112.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.96262219712377362, 0.27084775355280077, -113.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.91476671504920259, -0.40398249595507346, -113.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.84860217095332313, 0.5290315259540842, -114.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.7654528486360741, -0.64349198636418103, -114.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.66698298234897679, 0.74507295029202647, -115.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.55516344713527455, -0.83174127405394471, -115.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.4322323117525429, 0.90176229056057366, -116.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.30065004371128951, -0.95373452869045261, -116.5]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [-0.16305026300100225, 0.98661776374404697, -117.0]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [0.022187030168153377, -0.99975383754818237, -117.5]
+    radius 0.5
+  }
+  }
+}

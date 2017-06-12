@@ -1,0 +1,213 @@
+// Modifications based on http://www.graphics.cornell.edu/online/box/data.html
+
+xres 512
+yres 512
+filename "cornellbox_2spheres.ppm"
+maxraydepth 50000
+pixelsamplingfrequency 1
+lenssamplingfrequency 0
+timesamplingfrequency 0
+samplingfrequency 0
+pathtracingfrequency 30
+shutter 1.0
+
+camera thinlens {
+  eye [ 278, 273, -800 ]
+  lookat [ 278, 273, -799 ]
+  up [ 0, 1, 0 ]
+  hfov 39
+  lensradius 0.0125
+  focus 0.035
+}
+
+background constant {
+  color [ 0.0, 0.0, 0.0 ]
+}
+
+scene group {
+  polygon {  // area light
+    material phong {
+      color [ 100, 100, 100 ]
+      luminous true
+      reflective false
+    }
+    luminous true
+    frequency 2
+    points 4
+    [ 213, 548.8, 227 ]
+    [ 343, 548.8, 227 ]
+    [ 343, 548.8, 332 ]
+    [ 213, 548.8, 332 ]
+  }
+  
+  
+  polygon {  // ceiling part 0
+    material phong {
+      color [ 0.75, 0.75, 0.75 ]
+      luminous false   
+      reflective false	  	  
+      Kd 0.6
+      Ka 0.3     
+      exponent 20	
+      Kr 0.0
+    }
+    points 4
+    [ 0, 548.8, 0 ]
+    [ 556, 548.8, 0 ]
+    [ 556, 548.8, 227 ]
+    [ 0, 548.8, 227 ]
+  }
+  polygon {  // ceiling part 1
+    material phong {
+      color [ 0.75, 0.75, 0.75 ]
+      luminous false 
+      reflective false	  
+      Kd 0.6
+      Ka 0.3   
+      exponent 20	
+      Kr 0.0	  
+    }
+    points 4
+    [ 0, 548.8, 332 ]
+    [ 556, 548.8, 332 ]
+    [ 556, 548.8, 559.2 ]
+    [ 0, 548.8, 559.2 ]
+  }
+  polygon {  // ceiling part 2
+    material phong {
+      color [ 0.75, 0.75, 0.75 ]
+      luminous false      
+      reflective false	  
+      Kd 0.6
+      Ka 0.3  
+      exponent 20	
+      Kr 0.0	  	  
+    }
+    points 4
+    [ 0, 548.8, 227 ]
+    [ 213, 548.8, 227 ]
+    [ 213, 548.8, 332 ]
+    [ 0, 548.8, 332 ]
+  }
+  polygon {  // ceiling part 3
+    material phong {
+      color [ 0.75, 0.75, 0.75 ]
+      luminous false  
+      reflective false	  	  
+      Kd 0.6
+      Ka 0.3 
+      exponent 20	
+      Kr 0.0	  	  
+    }
+    points 4
+    [ 343, 548.8, 227 ]
+    [ 556, 548.8, 227 ]
+    [ 556, 548.8, 332 ]
+    [ 343, 548.8, 332 ]
+  }
+  polygon {  // back wall
+    material phong {
+      color [ 0.75, 0.75, 0.75 ]
+      luminous false  
+      reflective false	  	  
+      Kd 0.6
+      Ka 0.3    
+      exponent 20	
+      Kr 0.0	  	  
+    }
+    points 4
+    [ 556.0, 0.0, 559.2 ]
+    [ 0.0, 0.0, 559.2 ]
+    [ 0.0, 548.8, 559.2 ]
+    [ 556.0, 548.8, 559.2 ]
+  }
+  polygon {  // right wall, blue
+    material phong {
+      color [ 0.25, 0.25, 0.75 ]
+      luminous false  
+      reflective false	  	  
+      Kd 0.6
+      Ka 0.3 
+      exponent 20	
+      Kr 0.0	  	  
+    }
+    points 4
+    [ 0.0, 0.0, 559.2 ]
+    [ 0.0, 0.0, 0.0 ]
+    [ 0.0, 548.8, 0.0 ]
+    [ 0.0, 548.8, 559.2 ]
+  }
+  polygon {  // left wall, red
+    material phong {
+      color [ 0.75, 0.25, 0.25 ]
+      luminous false   
+      reflective false	  	  
+      Kd 0.6
+      Ka 0.3 
+      exponent 20	
+      Kr 0.0	  	  
+    }
+    points 4
+    [ 556.0, 0.0, 0.0 ]
+    [ 556.0, 0.0, 559.2 ]
+    [ 556.0, 548.8, 559.2 ]
+    [ 556.0, 548.8, 0.0 ]
+  }
+  polygon {  // floor
+    material phong {
+      color [ 0.75, 0.75, 0.75 ]
+      luminous false 
+      reflective false	  	  
+      Kd 0.6
+      Ka 0.3   
+      exponent 20	
+      Kr 0.0	  	  
+    }
+    points 4
+    [ 556.0, 0.0, 0.0 ]
+    [ 0.0, 0.0, 0.0 ]
+    [ 0.0, 0.0, 559.2 ]
+    [ 556.0, 0.0, 559.2 ]
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.0, 0.0]
+	   luminous false
+      reflective false
+      Kd 0.6
+      Ka 0.4
+      Kr 0.0
+      exponent 40
+    }
+    center [ 170, 320, 169 ]
+    radius 80
+	
+  } 
+  
+ // sphere {
+ //   material phong {
+ //     color [ 0.99, 0.99, 0.99 ]
+ //     luminous false 
+ //     reflective true	  	  
+ //     Kd 0.0
+ //     Ka 0.8   
+ //     exponent 10	
+ //     Kr 0.0	  	  
+ //   }
+ //   center [ 380, 80, 351 ]
+ //   radius 80
+ // }
+ // sphere {
+ //   material phong {
+ //     color [ 0.99, 0.99, 0.99 ]
+ //     luminous false 
+ //     reflective false	  	  
+ //     Kd 0.6
+ //     Ka 0.3  
+ //     exponent 20	
+ //     Kr 0.0	  	  
+ //   }
+ //   center [ 170, 80, 169 ]
+ //   radius 80
+ // }
+}

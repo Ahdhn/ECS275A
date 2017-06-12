@@ -1,0 +1,225 @@
+// Pyramid of Spheres
+
+xres 2048
+yres 2048
+filename "sphere_pyramid.ppm"
+maxraydepth 25
+minattenuation 0.01
+
+camera pinhole {
+  eye [ 6.0, 1.0, 12.0 ]
+  lookat [ 0.0, 2.0, 0.0 ]
+  up [ 0.0, 1.0, 0.0 ]
+  hfov 26.0
+}
+
+background constant {
+  color [ 0.1, 0.1, 0.1 ]
+}
+
+ambient 0.4
+
+light point {
+  position [ 40.0, 100.0, 40.0 ]
+  color [ 0.9, 0.9, 0.9 ]
+}
+
+
+scene group {
+
+
+// Floor
+  plane {
+    material lambertian {
+      color [ 0.8, 0.9, 0.8 ]
+      Kd 0.4
+      Ka 0.6
+    }
+    normal [ 0.0, 1.0, 0.0 ]
+    point [ 0.0, -0.5, 0.0 ]
+  }
+
+  // forward
+  plane {
+    material lambertian {
+      color [ 0.4, 0.1, 0.9 ]
+      Kd 0.4
+      Ka 0.6
+    }
+    normal [ 0.2, 0.5, 1.0 ]
+    point [ 0.0, 0.0, -100.0 ]
+  }
+  
+  // behind
+  plane {
+    material phong {
+      color [ 0.7, 1.0, 1.0 ]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.0
+      exponent 20
+    }
+    normal [ 0.0, 0.5, -1.0 ]
+    point [ 0.0, 0.0, 50.0 ]
+  }
+
+
+// Bottom layer
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ 0.0, 0.0, 0.0 ]
+    radius 0.5
+  }
+  sphere {
+   material phong {
+      color [1.0, 0.75, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ 1.0, 0.0, 0.0 ]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ -1.0, 0.0, 0.0 ]
+    radius 0.5
+  }
+  sphere {
+   material phong {
+      color [0.75, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ 0.0, 0.0, 1.0 ]
+    radius 0.5
+  }
+  sphere {
+     material phong {
+      color [0.5, 1.0, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ 0.0, 0.0, -1.0 ]
+    radius 0.5
+  }
+  sphere {
+     material phong {
+      color [0.5, 1.0, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ 1.0, 0.0, 1.0 ]
+    radius 0.5
+  }
+  sphere {
+ material phong {
+      color [0.5, 1.0, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ -1.0, 0.0, -1.0 ]
+    radius 0.5
+  }
+  sphere {
+     material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ -1.0, 0.0, 1.0 ]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.5, 0.75, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.1
+      exponent 40
+    }
+    center [ 1.0, 0.0, -1.0 ]
+    radius 0.5
+  }
+  
+  // Middle layer
+  sphere {
+    material phong {
+      color [0.5, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.2
+      exponent 40
+    }
+    center [ 0.5, 0.7, 0.5 ]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [0.75, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.2
+      exponent 40
+    }
+    center [ -0.5, 0.7, -0.5 ]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 1.0]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.2
+      exponent 40
+    }
+    center [ 0.5, 0.7, -0.5 ]
+    radius 0.5
+  }
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.75]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.2
+      exponent 40
+    }
+    center [ -0.5, 0.7, 0.5 ]
+    radius 0.5
+  }
+  
+  sphere {
+    material phong {
+      color [1.0, 0.5, 0.5]
+      Kd 0.6
+      Ka 0.4
+      Kr 0.3
+      exponent 40
+    }
+    center [ 0.0, 1.4, 0.0 ]
+    radius 0.5
+  }
+}
